@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="MessangerAction" class="actions.MessangerAction">
+            <result>/pages/MessangerResult.jsp</result>
+        </action>
+        <action name="WelcomeAction" class="actions.WelcomeAction">
+        	<result>/pages/MessangerResult.jsp</result>
+        </action>
+        <action name="test" class="actions.WelcomeAction">
+        	<result name="success" type="freemarker">pages/template.ftl</result>
+        </action>
+        <action name="register" class="actions.Register" method="execute">
+        	<result name="success">/pages/thankyou.jsp</result>
+        </action>
+        
+    </package>
+</struts>
